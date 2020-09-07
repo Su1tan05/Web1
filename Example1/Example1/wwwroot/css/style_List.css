@@ -1,0 +1,38 @@
+﻿body {
+    background: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg) no-repeat;
+    background-size: 100%; /* Современные браузеры */
+}
+.ttable 
+{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: auto;
+    text-align:center;
+    color: white;
+}
+
+header {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+h2 {
+    color: white;
+}
+table {
+    counter-reset: rowNumber;
+}
+ table tbody tr {
+    counter-increment: rowNumber;
+ }
+
+table tr td:first-child::before {
+        content: counter(rowNumber);
+        min-width: 1em;
+        margin-right: 0.5em;
+}
+.Click {
+    margin-top: 20px;
+    color: white;
+}

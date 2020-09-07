@@ -1,0 +1,28 @@
+﻿@model Example1.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            <h1>Спасибо большое @Model.Name!</h1>
+            @if (Model.WillAttend == true)
+            {
+                @: Отлично!!! Я очень рад что ты придешь)
+            }
+            else
+            {
+                @: Очень жаль, что ты не сможешь придти(((
+            }
+        </p>
+        <p>Нажми <a asp-action="ListResponses">сюда</a> для того чтобы увидеть кто придет)</p>
+</div>
+</body>
+</html>

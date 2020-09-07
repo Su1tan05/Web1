@@ -1,0 +1,42 @@
+﻿@model Example1.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="~/css/styles_Rsvp.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <form asp-action="RsvpForm" method="post">
+            <p>
+                <label asp-for="Name">Your Name: </label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your Email: </label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your Phone: </label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Chose option</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </p>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
